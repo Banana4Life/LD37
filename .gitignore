@@ -29,3 +29,10 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# ===== #
+# Rider #
+# ===== #
+*.iml
+.idea/.idea.LD37/.idea/*
+!codeStyleSettings.xml
