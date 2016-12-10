@@ -91,6 +91,56 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &181323765
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.1462164
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.54003
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.287651
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6390fa0d23edb25428c8bff6193bb049, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c78048b5a953bce4ab7c3295521c0082, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1001 &640723426
 Prefab:
   m_ObjectHideFlags: 0
@@ -210,7 +260,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1002414936 stripped
 GameObject:
@@ -257,7 +307,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ac7b378d733a96c4c92e9f3ffb668f69, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac7b378d733a96c4c92e9f3ffb668f69, type: 3}
