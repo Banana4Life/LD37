@@ -3,6 +3,7 @@
 public class Look : MonoBehaviour {
     public int lookSpeed = 15;
     public Object bullet;
+    public GameObject gun;
 
     // Use this for initialization
 	void Start () {
@@ -17,7 +18,6 @@ public class Look : MonoBehaviour {
 
 	    if (Input.GetMouseButtonDown(0))
 	    {
-	        var gun = gameObject.transform.Find("gun").gameObject;
 	        GameObject bulletInstance = (GameObject) Instantiate(bullet);
 	        bulletInstance.transform.position = gun.transform.position;
 	        bulletInstance.transform.rotation = gun.transform.rotation;
