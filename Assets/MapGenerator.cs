@@ -17,8 +17,12 @@ public class MapGenerator : MonoBehaviour
     public String seed;
     private long longSeed;
 
-    private Dictionary<Vector2, GameObject> map;
+    public Dictionary<Vector2, GameObject> map;
 
+    public Dictionary<Vector2, GameObject> getMap()
+    {
+        return map;
+    }
 
     // Use this for initialization
     void Start()

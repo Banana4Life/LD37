@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 33059210207858784}
   - component: {fileID: 23103886315005364}
   - component: {fileID: 95319220351988338}
+  - component: {fileID: 64830198707623342}
   m_Layer: 0
-  m_Name: Wall 1
+  m_Name: FloorWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,6 +80,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1793337870989616}
+  m_Mesh: {fileID: 4300000, guid: 5f065b29b14758d40b98f7343f7f66e2, type: 3}
+--- !u!64 &64830198707623342
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1793337870989616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 5f065b29b14758d40b98f7343f7f66e2, type: 3}
 --- !u!95 &95319220351988338
 Animator:
