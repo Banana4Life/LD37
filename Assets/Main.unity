@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27267543c47bb2448aed9e36f8ceb6f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorTile: {fileID: 1793337870989616, guid: fabc118b08113cb4eb61e5e8506387e9, type: 2}
-  wallTile: {fileID: 1034478834966390, guid: 8eefa748bd2502d40965fea2879e5a0d, type: 2}
+  floorTile: {fileID: 1295482324996296, guid: b31ce27a12cdbf647bd04cb660eedc74, type: 2}
+  wallTile: {fileID: 1473572538138960, guid: 8eefa748bd2502d40965fea2879e5a0d, type: 2}
   player: {fileID: 967056922}
   mapObject: {fileID: 835093327}
   tilesObject: {fileID: 950185160}
