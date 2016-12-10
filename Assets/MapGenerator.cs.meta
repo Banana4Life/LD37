@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 27267543c47bb2448aed9e36f8ceb6f1
+timeCreated: 1481364177
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - floorTile: {fileID: 1719970277129946, guid: 4ff3ee4118f9fa348afbbd2ee5f6f81a,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
