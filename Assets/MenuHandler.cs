@@ -67,12 +67,14 @@ public class MenuHandler : MonoBehaviour
 	            if (currentMenu == null)
 	            {
 	                helpScreen.SetActive(true);
+	                currentMenu = helpScreen;
 	                settings.StopTime();
 	            }
 	            else if (currentMenu == helpScreen)
 	            {
-	                mainMenu.GetComponent<MainMenu>().ResumeGame();
+	                helpScreen.SetActive(false);
 	                settings.ContinueTime();
+	                currentMenu = null;
 	            }
 	        }
 	    }
