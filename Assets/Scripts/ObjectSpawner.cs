@@ -26,7 +26,12 @@ public class ObjectSpawner : MonoBehaviour
 		}
 
         var settings = Objs.Settings();
-        settings.RemoveMoney(newItem.Costs);
+        if (!settings.RemoveMoney(newItem.Costs))
+        {
+            Orchestrator.play_buymenu_forbidden();
+            return;
+        }
+
         Orchestrator.play_delivery();
 
         if (item == null) {

@@ -123,7 +123,9 @@ public class Legio : MonoBehaviour
                     if (tile.hasMicrowave())
                     {
                         var settings = Objs.Settings();
-                        settings.RemoveMoney(settings.mealMakePrice);
+                        if (!settings.RemoveMoney(settings.mealMakePrice))
+                            return;
+
                         Debug.Log("Pickup Plate");
                         carryObject = Instantiate(foodCarryPrefab, gameObject.transform);
                         carryObject.GetComponent<Plate>().desire = selectedFood;
