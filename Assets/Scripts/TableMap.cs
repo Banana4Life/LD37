@@ -10,6 +10,7 @@ public class TableMap : MonoBehaviour
     public GameObject tablePrefab;
     public GameObject innerEdgePrefab;
     public GameObject outerEdgePrefab;
+    public GameObject compoundPrefab;
     private bool init;
     public float moveTime = 0.8f;
     public float delayTime = 0.5f;
@@ -114,7 +115,7 @@ public class TableMap : MonoBehaviour
                 structure = Transpose(structure);
                 break;
         }
-        var newTables = TableFactory.CreateTable(structure, at, Objs.Get(Objs.MAP), gameObject, tablePrefab, outerEdgePrefab, innerEdgePrefab);
+        var newTables = TableFactory.CreateTable(structure, at, Objs.Get(Objs.MAP), gameObject, tablePrefab, outerEdgePrefab, innerEdgePrefab, compoundPrefab);
         foreach (var table in newTables)
         {
             AddTable(table);
@@ -150,7 +151,8 @@ public class TableMap : MonoBehaviour
                     (IsTableAt(subTable.pos + Vector2.down) && GetTable(subTable.pos + Vector2.down).gameObject.transform.parent == tableGroup)||
                     (IsTableAt(subTable.pos + Vector2.right) && GetTable(subTable.pos + Vector2.right).gameObject.transform.parent == tableGroup)))
                 {
-                    GameObject compoundTable = new GameObject("CompoundTable");
+                    GameObject compoundTable = Instantiate(compoundPrefab);
+                    compoundTable.name = "CompoundTable";
                     compoundTable.transform.parent = tableGroup.transform.parent;
                     subTable.transform.parent = compoundTable.transform;
                 }

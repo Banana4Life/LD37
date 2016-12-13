@@ -23,6 +23,18 @@ public class Table : MonoBehaviour
     void Update()
     {
         animationFrame += Time.deltaTime; // time happens
+        updateLogicPosition();
+    }
+
+    private void updateLogicPosition()
+    {
+        if (tables.IsTableAt(pos) && tables.GetTable(pos).gameObject == gameObject)
+        {
+            tables.RemoveTableAt(pos);
+        }
+        //Debug.Log("Table move done " + table.pos + "->" + table.targetPos);
+        pos = MapGenerator.ToMapLocation(gameObject.transform);
+        tables.AddTable(this);
     }
 
     public bool startMove(Vector2 moveTo, bool push)

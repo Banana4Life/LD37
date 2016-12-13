@@ -2,11 +2,12 @@
 using UnityEngine;
 
 public class TableFactory {
-    public static List<Table> CreateTable(bool[][] shape, Vector2 basePos, GameObject mapObject, GameObject parent, GameObject prefTable, GameObject outerEdge, GameObject innerEdge)
+    public static List<Table> CreateTable(bool[][] shape, Vector2 basePos, GameObject mapObject, GameObject parent, GameObject prefTable, GameObject outerEdge, GameObject innerEdge, GameObject compoundPrefab)
     {
         var tableBuilder = parent.GetComponent<TableMap>();
 
-        GameObject compoundTable = new GameObject("CompoundTable");
+        GameObject compoundTable = MonoBehaviour.Instantiate(compoundPrefab);
+        compoundTable.name = "CompoundTable";
         compoundTable.transform.parent = parent.transform;
         var map = mapObject.GetComponent<MapGenerator>();
         compoundTable.transform.localPosition = map.GetTileMap()[basePos].transform.position;

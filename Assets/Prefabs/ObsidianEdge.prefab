@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23496191534276336}
   - component: {fileID: 95134016688200854}
   - component: {fileID: 114553843248599886}
+  - component: {fileID: 65715808641289642}
   m_Layer: 0
   m_Name: ObsidianEdge
   m_TagString: Untagged
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1962033102459538}
   m_Mesh: {fileID: 4300000, guid: b13ac266bde5bf147af95562224f8fcb, type: 3}
+--- !u!65 &65715808641289642
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1962033102459538}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.5, y: 6.5, z: 4.5}
+  m_Center: {x: 0, y: 3.25, z: 0}
 --- !u!95 &95134016688200854
 Animator:
   serializedVersion: 3

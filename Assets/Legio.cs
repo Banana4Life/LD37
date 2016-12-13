@@ -245,7 +245,7 @@ public class Legio : MonoBehaviour
                                 {
                                     foreach (var tableToMove in tableGroup)
                                     {
-                                        tableToMove.startMove(targetMove, false);
+                                        //tableToMove.startMove(targetMove, false);
                                         animator.SetBool("isPulling", true);
                                     }
                                     return true;
@@ -264,7 +264,7 @@ public class Legio : MonoBehaviour
                     else if (targetPullTile.GetComponent<TileInfo>().hasMicrowave())
                     {
                         //Debug.Log("Pull Microwave");
-                        targetPullTile.GetComponentInChildren<Microwave>().startMove(targetMove, false);
+                        //targetPullTile.GetComponentInChildren<Microwave>().startMove(targetMove, false);
                         animator.SetBool("isPulling", true);
                         return true;
 
@@ -296,7 +296,7 @@ public class Legio : MonoBehaviour
                                 {
                                     foreach (var tableToMove in tableGroup)
                                     {
-                                        tableToMove.startMove(targetMove, true);
+                                        //tableToMove.startMove(targetMove, true);
                                         animator.SetBool("isPushing", true);
                                     }
                                     return true;
@@ -320,8 +320,8 @@ public class Legio : MonoBehaviour
                     var behindTargetTile = mapGen.GetTileMap()[targetPos + lookAt];
                     if (behindTargetTile.GetComponent<TileInfo>().canPass())
                     {
+                        //targetTile.GetComponentInChildren<Microwave>().startMove(targetMove, true);
                         animator.SetBool("isPushing", true);
-                        targetTile.GetComponentInChildren<Microwave>().startMove(targetMove, true);
                     }
                 }
                 // TODO other pushable objects?

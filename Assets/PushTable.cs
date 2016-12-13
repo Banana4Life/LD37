@@ -27,7 +27,7 @@ public class PushTable : StateMachineBehaviour {
 	    animator.GetComponent<Legio>().currentPos = mapPos;
 	    animator.transform.position = MapGenerator.ToWorldLocation(mapPos);
 
-	    Debug.Log("Pushtable done");
+	    //Debug.Log("Pushtable done");
 
 	    animator.SetBool("isPushing", false);
 	    animator.SetInteger("Forward", 0);

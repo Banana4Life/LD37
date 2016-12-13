@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23251194831709776}
   - component: {fileID: 95512370846691590}
   - component: {fileID: 114760611646918274}
+  - component: {fileID: 65907788642391582}
   m_Layer: 0
   m_Name: ObsidianCornerTwoSided
   m_TagString: Untagged
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1762505281851526}
   m_Mesh: {fileID: 4300000, guid: 6211fd4ddd11aa2459df2bfef295edb9, type: 3}
+--- !u!65 &65907788642391582
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762505281851526}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.5, y: 6.5, z: 4.5}
+  m_Center: {x: 0, y: 3.25, z: 0}
 --- !u!95 &95512370846691590
 Animator:
   serializedVersion: 3
