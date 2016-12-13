@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.78.0 commit date:2016-10-24, commit time:12:20, hash:e8299c8</authoring_tool>
+    </contributor>
+    <created>2016-12-10T18:41:55</created>
+    <modified>2016-12-10T18:41:55</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="Plate_png" name="Plate_png">
+      <init_from>Plate.png</init_from>
+    </image>
+  </library_images>
+  <library_effects>
+    <effect id="palette_001-effect">
+      <profile_COMMON>
+        <newparam sid="Plate_png-surface">
+          <surface type="2D">
+            <init_from>Plate_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Plate_png-sampler">
+          <sampler2D>
+            <source>Plate_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Plate_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="palette_001-material" name="palette_001">
+      <instance_effect url="#palette_001-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plate-mesh" name="Plate">
+      <mesh>
+        <source id="Plate-mesh-positions">
+          <float_array id="Plate-mesh-positions-array" count="72">-10.5 1 10.5 -10.5 0 -10.5 -10.5 0 10.5 -10.5 1 -10.5 10.5 0 10.5 10.5 0 -10.5 10.5 1 10.5 10.5 1 -10.5 10.5 0 10.5 -10.5 1 10.5 -10.5 0 10.5 10.5 1 10.5 -10.5 0 -10.5 -10.5 1 -10.5 10.5 0 -10.5 10.5 1 -10.5 -10.5 0 -10.5 10.5 0 10.5 -10.5 0 10.5 10.5 0 -10.5 -10.5 1 10.5 10.5 1 10.5 -10.5 1 -10.5 10.5 1 -10.5</float_array>
+          <technique_common>
+            <accessor source="#Plate-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plate-mesh-normals">
+          <float_array id="Plate-mesh-normals-array" count="18">-1 0 0 1 0 0 0 0 1 0 0 -1 0 -1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#Plate-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plate-mesh-map-0">
+          <float_array id="Plate-mesh-map-0-array" count="72">0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5 0.962891 0.5</float_array>
+          <technique_common>
+            <accessor source="#Plate-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plate-mesh-vertices">
+          <input semantic="POSITION" source="#Plate-mesh-positions"/>
+        </vertices>
+        <polylist material="palette_001-material" count="12">
+          <input semantic="VERTEX" source="#Plate-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plate-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plate-mesh-map-0" offset="2" set="0"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>0 0 0 1 0 1 2 0 2 3 0 3 1 0 4 0 0 5 4 1 6 5 1 7 6 1 8 6 1 9 5 1 10 7 1 11 8 2 12 9 2 13 10 2 14 11 2 15 9 2 16 8 2 17 12 3 18 13 3 19 14 3 20 14 3 21 13 3 22 15 3 23 16 4 24 17 4 25 18 4 26 19 4 27 17 4 28 16 4 29 20 5 30 21 5 31 22 5 32 22 5 33 21 5 34 23 5 35</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Plate" name="Plate" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 -1.62921e-7 -1 0 0 1 -1.62921e-7 0 0 0 0 1</matrix>
+        <instance_geometry url="#Plate-mesh" name="Plate">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="palette_001-material" target="#palette_001-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

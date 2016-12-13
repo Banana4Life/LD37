@@ -36,3 +36,4 @@ Thumbs.db
 *.iml
 .idea/.idea.LD37/.idea/*
 !codeStyleSettings.xml
+Build/

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c8cd04499bbf7b48acf757c23d7caaf
+timeCreated: 1481495463
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Icon: {instanceID: 0}
+  - UIPrefab: {fileID: 1103765395759024, guid: b468386451f97684e8f80579ca5f66f7, type: 2}
+  - ListHandler: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
