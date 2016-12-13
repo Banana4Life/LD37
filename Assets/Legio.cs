@@ -335,8 +335,13 @@ public class Legio : MonoBehaviour
         var legio = animator.gameObject.GetComponent<Legio>();
         // Debug.Log(legio.currentPos + " " + legio.targetMove + " " + legio.targetPos);
 
-        if (legio.lookAt == legio.targetMove)
+        var objVec = animator.gameObject.transform.rotation * Vector3.forward;
+        var objCross = Vector3.Cross(new Vector2(objVec.x, objVec.z), legio.targetMove);
+        var objAngle = Vector3.Angle(new Vector2(objVec.x, objVec.z), legio.targetMove);
+
+        if (objAngle < 10)
         {
+            animator.gameObject.transform.LookAt(animator.gameObject.transform.position + new Vector3(legio.targetMove.x, 0, legio.targetMove.y));
             var tileMap = Objs.Get(Objs.MAP).GetComponent<MapGenerator>().GetTileMap();
             if (legio.currentPos == legio.targetPos)
             {
@@ -364,14 +369,7 @@ public class Legio : MonoBehaviour
         else
         {
             animator.SetInteger("Forward", 0);
-            var cross = Vector3.Cross(legio.lookAt, legio.targetMove);
-            var angle = Vector2.Angle(legio.lookAt, legio.targetMove);
-            if (cross.z < 0)
-            {
-                angle = -angle;
-            }
-
-            animator.SetInteger("Left", (int) angle);
+            animator.SetInteger("Left", (int) (objCross.z > 0 ? objAngle : -objAngle));
             // Debug.Log("Turn Angle " + angle);
         }
     }

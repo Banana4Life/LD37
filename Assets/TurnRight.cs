@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurnRight : StateMachineBehaviour
 {
@@ -18,11 +19,14 @@ public class TurnRight : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         var legio = animator.GetComponent<Legio>();
+        /*
         var vec = animator.gameObject.transform.eulerAngles;
         vec.x = Mathf.Round(vec.x / 90) * 90;
         vec.y = Mathf.Round(vec.y / 90) * 90;
         vec.z = Mathf.Round(vec.z / 90) * 90;
         animator.gameObject.transform.eulerAngles = vec;
+*/
+/*
         if (legio.lookAt == Vector2.up)
         {
             legio.lookAt = Vector2.right;
@@ -39,6 +43,14 @@ public class TurnRight : StateMachineBehaviour
         {
             legio.lookAt = Vector2.up;
         }
+*/
+        var vec = animator.gameObject.transform.eulerAngles;
+        vec.x = Mathf.Round(vec.x / 90) * 90;
+        vec.y = Mathf.Round(vec.y / 90) * 90;
+        vec.z = Mathf.Round(vec.z / 90) * 90;
+        vec = Quaternion.Euler(vec.x, vec.y, vec.z) * Vector3.forward;
+        legio.lookAt = new Vector2(vec.x, vec.z);
+
         //Debug.Log("Turn Right complete: " + legio.lookAt);
         Legio.getMoveInfo(animator);
     }

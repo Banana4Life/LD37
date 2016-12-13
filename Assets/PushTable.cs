@@ -17,15 +17,17 @@ public class PushTable : StateMachineBehaviour {
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	    Legio.getMoveInfo(animator);
+	    /*
 	    var vec = animator.gameObject.transform.eulerAngles;
 	    vec.x = Mathf.Round(vec.x / 90) * 90;
 	    vec.y = Mathf.Round(vec.y / 90) * 90;
 	    vec.z = Mathf.Round(vec.z / 90) * 90;
 	    animator.gameObject.transform.eulerAngles = vec;
+*/
 
 	    var mapPos = MapGenerator.ToMapLocation(animator.transform);
 	    animator.GetComponent<Legio>().currentPos = mapPos;
-	    animator.transform.position = MapGenerator.ToWorldLocation(mapPos);
+	    //animator.transform.position = MapGenerator.ToWorldLocation(mapPos);
 
 	    //Debug.Log("Pushtable done");
 

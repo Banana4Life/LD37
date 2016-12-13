@@ -18,6 +18,7 @@ public class TurnLeft : StateMachineBehaviour {
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 	    var legio = animator.GetComponent<Legio>();
+	    /*
 	    var vec = animator.gameObject.transform.eulerAngles;
 	    vec.x = Mathf.Round(vec.x / 90) * 90;
 	    vec.y = Mathf.Round(vec.y / 90) * 90;
@@ -40,6 +41,15 @@ public class TurnLeft : StateMachineBehaviour {
 	    {
 	        legio.lookAt = Vector2.down;
 	    }
+	    */
+
+	    var vec = animator.gameObject.transform.eulerAngles;
+	    vec.x = Mathf.Round(vec.x / 90) * 90;
+	    vec.y = Mathf.Round(vec.y / 90) * 90;
+	    vec.z = Mathf.Round(vec.z / 90) * 90;
+	    vec = Quaternion.Euler(vec.x, vec.y, vec.z) * Vector3.forward;
+	    legio.lookAt = new Vector2(vec.x, vec.z);
+
 	    //Debug.Log("Turn Left complete: " + legio.lookAt);
 	    animator.SetInteger("Forward", 0);
 	    animator.SetInteger("Left", 0);
