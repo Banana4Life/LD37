@@ -214,7 +214,7 @@ public class Orchestrator : MonoBehaviour
 
     public void SwitchToNight()
     {
-        inactiveTrack = maintheme_day;
+		inactiveTrack = maintheme_day_long;
         activeTrack = maintheme_night;
         activeTrack.Play();
         play_backdrop_night();
@@ -223,7 +223,7 @@ public class Orchestrator : MonoBehaviour
     public void SwitchToDay()
     {
         inactiveTrack = maintheme_night;
-        activeTrack = maintheme_day;
+		activeTrack = maintheme_day_long;
         activeTrack.Play();
         play_backdrop_day();
     }
